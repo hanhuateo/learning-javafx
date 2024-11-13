@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
 
@@ -17,7 +18,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        // scene = new Scene(loadFXML("primary"), 640, 480);
+        // stage.setScene(scene);
+        // stage.show();
+        stage.setTitle("My First JavaFX App");
+        Label label = new Label("Hello World, JavaFX!");
+        Scene scene = new Scene(label, 400, 200);
         stage.setScene(scene);
         stage.show();
     }
