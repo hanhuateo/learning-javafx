@@ -13,10 +13,12 @@ public class CalculatorController {
 
     private String actualText;
 
-    private String[] operator = new String[1];
+    private String operator = new String();
+
+    private Double[] calculation = new Double[2];
 
     @FXML
-    public void handleClick(Event event) {
+    public void handleNumberDecimalClick(Event event) {
         actualText = display.getText();
         Button btn = (Button) event.getSource();
         switch (btn.getId()) {
@@ -51,7 +53,11 @@ public class CalculatorController {
                 display.appendText("9");
                 break;
             case "decimal":
-                display.appendText(".");
+                if (display.getText().contains(".")) {
+                    return;
+                } else {
+                    display.appendText(".");
+                }
                 break;
         }
     }
@@ -89,4 +95,20 @@ public class CalculatorController {
         }
     }
 
+    @FXML
+    public void handleOperatorClick(Event event) {
+        Button btn = (Button) event.getSource();
+        double number = Double.parseDouble(display.getText());
+
+        switch (btn.getId()) {
+            case "plus":
+                display.setText("0");
+                operator = "plus";
+                break;
+            case "minus":
+                display.setText("0");
+                operator = "minus";
+                break;
+        }
+    }
 }
