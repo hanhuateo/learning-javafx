@@ -24,7 +24,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         System.out.println(Thread.currentThread().getName());
-        scene = new Scene(loadFXML("primary"), 360, 480);
+        scene = new Scene(loadFXML("calculator"), 360, 480);
         stage.setScene(scene);
         stage.show();
     }
