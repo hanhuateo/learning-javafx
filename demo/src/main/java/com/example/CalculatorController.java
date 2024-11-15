@@ -11,15 +11,12 @@ public class CalculatorController {
     @FXML
     private Button one, two, three, four, five, six, seven, eight, nine, zero, plus, minus, multiply, divide, percent, change, buttonDelete, decimal, equal;
 
-    private String actualText;
-
     private String operator = new String();
 
     private Double[] calculation = new Double[2];
 
     @FXML
     public void handleNumberDecimalClick(Event event) {
-        actualText = display.getText();
         Button btn = (Button) event.getSource();
         switch (btn.getId()) {
             case "zero":
@@ -99,16 +96,69 @@ public class CalculatorController {
     public void handleOperatorClick(Event event) {
         Button btn = (Button) event.getSource();
         double number = Double.parseDouble(display.getText());
-
+        this.calculation[0] = number;
         switch (btn.getId()) {
             case "plus":
                 display.setText("0");
-                operator = "plus";
+                this.operator = "plus";
                 break;
             case "minus":
                 display.setText("0");
-                operator = "minus";
+                this.operator = "minus";
+                break;
+            case "multiply":
+                display.setText("0");
+                this.operator = "multiply";
+                break;
+            case "divide":
+                display.setText("0");
+                this.operator = "divide";
                 break;
         }
+    }
+
+    @FXML
+    public void handleEqualBtnClick() {
+        double number = Double.parseDouble(display.getText());
+        this.calculation[1] = number;
+        double result = 0;
+        switch(this.operator) {
+            case "plus":
+                result = this.calculation[0] + this.calculation[1];
+                display.setText(Double.toString(result));
+                this.calculation[0] = 0.0;
+                this.calculation[1] = 0.0;
+                this.operator = "";
+                break;
+            case "minus":
+                result = this.calculation[0] - this.calculation[1];
+                display.setText(Double.toString(result));
+                this.calculation[0] = 0.0;
+                this.calculation[1] = 0.0;
+                this.operator = "";
+                break;
+            case "multiply":
+                result = this.calculation[0] * this.calculation[1];
+                display.setText(Double.toString(result));
+                this.calculation[0] = 0.0;
+                this.calculation[1] = 0.0;
+                this.operator = "";
+                break;
+            case "divide":
+                result = this.calculation[0] * this.calculation[1];
+                display.setText(Double.toString(result));
+                this.calculation[0] = 0.0;
+                this.calculation[1] = 0.0;
+                this.operator = "";
+                break;
+        }
+    }
+
+    @FXML
+    public void handleDeleteButtonClick() {
+        display.setText("0");
+        this.operator = "";
+        this.calculation[0] = 0.0;
+        this.calculation[1] = 0.0;
     }
 }

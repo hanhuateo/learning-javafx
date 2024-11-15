@@ -27,24 +27,24 @@
          <font>
             <Font name="Times New Roman" size="30.0" />
          </font></TextArea>
-      <Button fx:id="buttonDelete" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="C" GridPane.rowIndex="1" />
+      <Button fx:id="buttonDelete" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="C" GridPane.rowIndex="1" onAction="#handleDeleteButtonClick"/>
       <Button fx:id="change" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="+/-" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#changeSign"/>
       <Button fx:id="percent" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#toPercentage"/>
-      <Button fx:id="divide" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="divide" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleOperatorClick"/>
       <Button fx:id="seven" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="7" GridPane.rowIndex="2" onAction="#handleNumberDecimalClick"/>
       <Button fx:id="eight" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#handleNumberDecimalClick"/>
       <Button fx:id="nine" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#handleNumberDecimalClick"/>
-      <Button fx:id="multiply" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button fx:id="multiply" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#handleOperatorClick"/>
       <Button fx:id="four" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="4" GridPane.rowIndex="3" onAction="#handleNumberDecimalClick"/>
       <Button fx:id="five" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#handleNumberDecimalClick"/>
       <Button fx:id="six" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#handleNumberDecimalClick"/>
-      <Button fx:id="minus" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Button fx:id="minus" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" onAction="#handleOperatorClick"/>
       <Button fx:id="one" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="1" GridPane.rowIndex="4" onAction="#handleNumberDecimalClick"/>
       <Button fx:id="two" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" onAction="#handleNumberDecimalClick"/>
       <Button fx:id="three" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" onAction="#handleNumberDecimalClick"/>
-      <Button fx:id="plus" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Button fx:id="plus" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" onAction="#handleOperatorClick"/>
       <Button fx:id="decimal" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" onAction="#handleNumberDecimalClick"/>
-      <Button fx:id="equal" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Button fx:id="equal" mnemonicParsing="false" prefHeight="80.0" prefWidth="90.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5" onAction="#handleEqualBtnClick"/>
       <Button fx:id="zero" mnemonicParsing="false" prefHeight="80.0" prefWidth="180.0" text="0" GridPane.columnSpan="2" GridPane.rowIndex="5" onAction="#handleNumberDecimalClick"/>
    </children>
 </GridPane>
